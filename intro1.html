@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.8rem;
+        }
+        .container{
+            max-width: 450px;
+            margin: 2rem auto;
+            padding: 0.5rem;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        main{
+            background-color: skyblue;
+            padding: 0.5rem;
+            border: 1px solid #666;
+        }
+        section:first-of-type {
+            background-color: thistle;
+            padding: 0.5rem;
+            border: 1px solid #666;
+        }
+        section:last-of-type {
+            background-color: turquoise;
+            padding: 0.5rem;
+            border: 1px solid #666;
+        }
+        /* float */
+        .float {
+            margin: 1rem 0 2rem;
+            overflow: auto;
+        }
+        .float section:first-of-type {
+            float: left;
+            width: 50%;
+        }
+        .float section:last-of-type {
+            float: right;
+            width: 50%;
+        }
+        /* flex */
+        .flexbox {
+            margin: 1rem 0 2rem;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .flexbox > main {
+            flex-basis: 100%;
+        }
+        .flexbox section {
+            flex-basis: 50%;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>USING FLOAT</h2>
+        <div class="float">
+            <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a reiciendis sint fuga exercitationem praesentium possimus perferendis, tempora quas repellendus.
+            
+            </main>
+            <section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam doloribus repellendus ab corporis soluta beatae quidem facere iusto voluptatibus fugiat.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam doloribus repellendus ab corporis soluta beatae quidem facere iusto voluptatibus fugiat.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam doloribus repellendus ab corporis soluta beatae quidem facere iusto voluptatibus fugiat.
+            </section>
+            <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptatibus omnis non delectus! Optio recusandae facere ipsum asperiores, facilis obcaecati.
+
+            </section>
+        </div>
+        <h2>USING FLEXBOX</h2>
+        <div class="flexbox">
+            <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a reiciendis sint fuga exercitationem praesentium possimus perferendis, tempora quas repellendus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a reiciendis sint fuga exercitationem praesentium possimus perferendis, tempora quas repellendus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a reiciendis sint fuga exercitationem praesentium possimus perferendis, tempora quas repellendus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a reiciendis sint fuga exercitationem praesentium possimus perferendis, tempora quas repellendus.
+            </main>
+            <section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam doloribus repellendus ab corporis soluta beatae quidem facere iusto voluptatibus fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni perferendis in earum consequatur dolore consectetur, quo numquam enim voluptate? Repellendus facere saepe totam inventore explicabo et, molestias ea nulla delectus debitis voluptate amet laboriosam ad officiis pariatur quos sapiente mollitia impedit aspernatur fuga magnam possimus facilis! Quam, molestias eligendi?
+            </section>
+            <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptatibus omnis non delectus! Optio recusandae facere ipsum asperiores, facilis obcaecati.
+
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
